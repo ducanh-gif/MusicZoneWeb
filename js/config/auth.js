@@ -39,14 +39,20 @@ async function handleLogin(event) {
     };
 
     localStorage.setItem("user_session", JSON.stringify(userSession));
-    profile = await profileService.getUserByEmail(user.email);
+    console.log(1);
+    
+    let profile = await profileService.getUserByEmail(user.email);
+    console.log(profile);
+    
     if (profile.roleId == 1) {
       window.location.href = "./admin.html";
     } else {
       window.location.href = "./index.html";
     }
   } catch (error) {
-    alert("Mật khẩu hoặc email không đúng");
+    console.log(error);
+    
+    alert("Mật khẩu hoặc email không đúng", error);
   }
 }
 

@@ -533,10 +533,13 @@ async function deleteSong(id) {
 }
 
 async function checkRole() {
+  
   if (!user) {
     window.location.href = "./login.html";
   } else {
-    profile = profileService.getUserByEmail(user.email);
+    let profile = await profileService.getUserByEmail(user.email);
+    console.log(profile);
+
     if (profile.roleId != 1) {
       localStorage.removeItem("user_session");
       window.location.href = "./login.html";
