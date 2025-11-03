@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi tiết Album</title>
+  <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/albums-songs.css" />
+    <link rel="stylesheet" href="../css/audio.css">
+<nav>
+  <div class="nav-left">
+    <a href="./index.html">Home</a>
+    <a href="./playlist.html">Playlists</a>
+    <a href="./setting.html">Settings</a>
+  </div>
+
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input id="search-input" type="text" placeholder="Tìm kiếm ...">
+    <button id="search-btn">Search</button>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <div class="nav-right">
+    <a href="profile.html" class="profile-btn"><span>👤</span>Profile</a>
+    <button class="logout-btn"><span>🚪</span>Log out</button>
+  </div>
+</nav>
+</head>
+<body>
+  <div class="album-header">
+    <img id="album-poster" src="" alt="Album Poster">
+    <div class="album-title" id="album-title">Tên Album</div>
+  </div>
+
+  <table class="song-list" id="song-list">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Thumbnail</th>
+        <th>Bài hát</th>
+        <th>Tác giả</th>
+      </tr>
+    </thead>
+    <tbody id="song-table-body">
+      <!-- Songs will be injected here -->
+    </tbody>
+  </table>
+
+
+<div id="player-banner" class="player-banner">
+  <img id="player-thumbnail" src="" alt="thumbnail" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;">
+  <div id="now-playing-info"></div>
+    
+  <div class="custom-audio-player">
+    <audio id="audio-player" ></audio>
+ <button id="play-pause">
+ <img src="../asset/media-player-music-pause-svgrepo-com.svg" alt="Play/Pause" style="width: 24px; height: 24px;"> 
+</button>
+    <span id="current-time">00:00</span>
+    <input type="range" id="seek-bar" value="0" step="1">
+    <span id="duration">00:00</span>
+  </div>
+   <button id="favorite-btn" style="background: none; border: none; cursor: pointer;">
+      <img id="favorite-icon" src="../asset/favorite_24dp_75FBFD_FILL0_wght400_GRAD0_opsz24.svg" alt="Favorite" style="width: 24px; height: 24px;">
+    </button>
+</div>
+
+
+
+<script type="module" src="../js/controller/albums-songs.js"></script>
+<script type="module" src="../js/controller/audio.js"></script>
+</body>
+</html>

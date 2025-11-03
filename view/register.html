@@ -1,0 +1,42 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <link rel="stylesheet" href="../css/login,register.css" />
+</head>
+<body>
+<div class="background">
+      <div class="auth-card">
+        <div id="register-form" class="form-container">
+         <h2>Create Account</h2>
+            <p>Please fill in the details</p>
+         <form id="register">
+          <div class="input-group">
+            <input id="username" type="text" placeholder="Username" required />
+          </div>
+          <div class="input-group">
+            <input id="email" type="email" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <input id="password" type="password" placeholder="Password" required />
+          </div>
+          <div class="input-group">
+            <input id="confirmpassword" type="password" placeholder="Confirm Password" required />
+          </div>
+          <button type="submit">Register</button>
+        </form>
+        <a class="toggle-link" href="login.html">Already have an account? Login</a>
+      </div>
+    </div>
+</div>
+
+  </body>
+
+    <script type="module" src="../js/config/auth.js"></script>
+    <script type="module" src="../js/config/check_session.js"></script>

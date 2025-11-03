@@ -1,0 +1,298 @@
+
+/* body */
+
+    body { background: #181c24; color: #fff; }
+    .admin-header {
+      background: #232323;
+      padding: 24px 0 12px 0;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      margin-bottom: 20px;
+    }
+    .admin-header h1 {
+      color: #00ffe7;
+      font-size: 2.2em;
+      margin-bottom: 8px;
+    }
+    .admin-nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 18px 0 32px 0;
+    }
+    .admin-nav a {
+      color: #fff;
+      background: #232323;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .admin-nav a:hover, .admin-nav a.active {
+      background: #00ffe7;
+      color: #232323;
+    }
+    .admin-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #232323;
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      margin-bottom: 32px;
+    }
+    .admin-section h2 {
+      color: #00ffe7;
+      margin-bottom: 18px;
+      font-size: 1.4em;
+    }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+    }
+    .admin-table th, .admin-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+    }
+    .admin-table th {
+      color: #00ffe7;
+      background: #1a1a1a;
+    }
+    .admin-table tr:hover {
+      background: #222b36;
+    }
+
+    .admin-actions button:hover {
+      background: #00ffe7;
+      color: #232323;
+    }
+    @media (max-width: 700px) {
+      .admin-section { padding: 12px 2vw; }
+      .admin-header h1 { font-size: 1.2em; }
+      .admin-nav { flex-direction: column; gap: 10px; }
+      .admin-table th, .admin-table td { font-size: 0.95em; }
+    }
+  
+    /* Nút nav phải giống trang index */
+.nav-right li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.nav-right a {
+  color: #cccccc;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 24px;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  display: inline-block;
+}
+
+#login-link a, #signup-link a {
+  background: #27d3d9;
+  color: #232323;
+}
+
+#login-link a:hover, #signup-link a:hover {
+  background: #00ffe7;
+  color: #232323;
+}
+
+#profile-link a {
+  background: #00ffe7;
+  color: #232323;
+}
+
+#profile-link a:hover {
+  background: #27d3d9;
+  color: #fff;
+}
+
+#logout-link a {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+#logout-link a:hover {
+  background: #232323;
+  color: #ff4d4f;
+}
+
+/* Thu nhỏ ảnh avatar, poster trong bảng admin */
+.admin-table img {
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  margin: 0 auto;
+}
+
+/* Nếu là avatar tròn (artist) */
+.admin-table td img[alt*="Sơn Tùng"], 
+.admin-table td img[alt*="avatar"], 
+.admin-table td img[alt*="Artist"], 
+.admin-table td img[alt*="artist"] {
+  border-radius: 50% !important;
+}
+/* admin action btn  */
+/* Nút edit và delete nhỏ gọn, có icon */
+.admin-actions button {
+ 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.admin-actions button i {
+  font-size: 14px;
+}
+
+.admin-actions button.edit {
+  background: #27d3d9;
+  color: #232323;
+}
+
+.admin-actions button.edit:hover {
+  background: #00ffe7;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,255,231,0.25);
+}
+
+.admin-actions button.delete {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.admin-actions button.delete:hover {
+  background: #ff6668;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255,77,79,0.25);
+}
+
+/* Nếu muốn hai nút nằm sát phải */
+.admin-actions {
+  text-align: right !important;
+}
+.admin-actions button.icon-only {
+  padding: 5px 6px;
+  width: 28px;
+  height: 28px;
+  justify-content: center;
+}
+
+.admin-actions button.icon-only span { display: none; }
+.admin-actions button {
+  width: 80px;         /* cùng chiều rộng */
+  height: 32px;        /* cùng chiều cao */
+  padding: 0;          /* bỏ padding mặc định */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.admin-actions button.edit {
+  background: #27d3d9;
+  color: #232323;
+}
+.admin-actions button.delete {
+  background: #ff4d4f;
+  color: #fff;
+}
+.admin-actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 255, 231, 0.25);
+}
+/* ==== Edit Form Popup ==== */
+.edit-form {
+  display: none; /* ẩn mặc định */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.edit-form-content {
+  min-width: 350px;
+  background: #232323;
+  padding: 24px 28px;
+  border-radius: 12px;
+  width: fit-content;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.edit-form-content h3 {
+  color: #00ffe7;
+  margin-bottom: 16px;
+}
+
+.edit-form-content img{
+  max-width: 150px;
+
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.edit-form-content label {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.edit-form-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 6px;
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.form-buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#saveEdit {
+  background: #00ffe7;
+  color: #232323;
+}
+
+#cancelEdit {
+  background: #ff4d4f;
+  color: #fff;
+}

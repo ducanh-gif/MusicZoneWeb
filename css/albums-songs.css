@@ -1,0 +1,168 @@
+  body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+.album-header {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #282828;
+ 
+}
+
+.album-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.album-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.album-header p {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+    .song-list {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .song-list th, .song-list td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .song-thumbnail {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+
+  .song-list {
+    margin-top: 30px;
+  }
+
+  .song-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    cursor: pointer;
+  }
+
+  .song-row:hover {
+    background-color: #2a2a2a;
+  }
+
+  .song-index, .song-play {
+    width: 30px;
+    text-align: center;
+    margin-right: 16px;
+    font-weight: bold;
+    color: #b3b3b3;
+  }
+
+  .song-play {
+    display: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  .song-row:hover .song-index {
+    display: none;
+  }
+
+  .song-row:hover .song-play {
+    display: inline-block;
+  }
+
+  .song-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 16px;
+  }
+
+  .song-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .song-artist {
+    color: #b3b3b3;
+    font-size: 14px;
+  }
+
+
+
+
+  .song-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.song-list th,
+.song-list td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.song-list tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.song-list tbody tr:hover {
+  background-color: #a2a2a297;
+}
+
+/* Cột số thứ tự */
+.song-list td:first-child {
+  width: 50px;
+  text-align: center;
+  color: #888;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/* Khi hover: số thứ tự -> icon play */
+.song-list tbody tr:hover td:first-child {
+  color: #ffffff; 
+}
+
+
+/* Thumbnail */
+.song-thumbnail {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.song-title,
+.author-name {
+  color: #888;
+}
+/* Khi hover vào hàng: đổi thành trắng */
+.song-list tbody tr:hover .song-title,
+.song-list tbody tr:hover .author-name {
+  color: #fff;
+}

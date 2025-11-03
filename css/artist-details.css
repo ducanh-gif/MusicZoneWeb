@@ -1,0 +1,255 @@
+/* Reset và body */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; padding: 0;
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  flex: 1; /* phần nội dung chính chiếm hết không gian còn lại */
+}
+footer {
+  background: #222;
+  color: #ffffff48;
+  padding: 15px;
+  text-align: center;
+}
+/* Artist Header */
+.artist-header {
+    margin-top: 75px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #282828;
+  
+}
+
+.artist-header img {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.artist-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+ 
+}
+
+.artist-header p {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+/* Album List */
+.artist-albums {
+  padding: 20px 30px;
+}
+
+.artist-albums h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #ffffff;
+}
+
+#album-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#album-list li {
+  background-color: #181818;
+  border-radius: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+  flex: 1 1 150px;
+  max-width: 150px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 5px transparent;
+}
+
+#album-list li:hover {
+  background-color: #6c6d6d6b;
+  box-shadow: 0 0 15px #00ffe7;
+  color: #000;
+}
+
+/* Album Details */
+#album-details {
+  padding: 20px 30px;
+  background-color: #181818;
+  border-radius: 10px;
+  margin: 20px 30px;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+.album-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.album-header img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+ 
+}
+
+.album-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+ 
+}
+
+/* Song List Table */
+.song-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.song-list thead tr {
+  border-bottom: 2px solid #ffffff;
+}
+
+.song-list th, .song-list td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.song-list tbody tr {
+  border-bottom: 1px solid #282828;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.song-list tbody tr:hover {
+  background-color: #7b7b7b76;
+  color: #ffffff;
+}
+
+.song-list img {
+  border-radius: 6px;
+}
+
+/* Player Banner */
+.player-banner {
+  display: flex;
+  align-items: center;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+
+  z-index: 1000;
+}
+
+.player-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+ 
+}
+
+#now-playing-info {
+  flex-grow: 1;
+  margin-left: 15px;
+  font-weight: 600;
+
+}
+
+/* Audio Player Controls */
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.custom-audio-player button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-audio-player input[type="range"] {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 4px;
+  background: #404040;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.custom-audio-player input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 6px #ffffff;
+  transition: background 0.3s;
+}
+
+.custom-audio-player input[type="range"]:hover::-webkit-slider-thumb {
+  background: #ffffff;
+}
+
+/* Scrollbar đẹp */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a4a1a17c;
+  border-radius: 10px;
+  border: 2px solid #121212;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .artist-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .album-header {
+    flex-direction: column;
+  }
+
+  #album-list {
+    flex-direction: column;
+  }
+}

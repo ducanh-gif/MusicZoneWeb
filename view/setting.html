@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/setting.css" />
+  <link rel="stylesheet" href="../css/audio.css" />
+</head>
+<body>
+<header>
+  <h1>⚙️ Settings</h1>
+<nav>
+  <div class="nav-left">
+    <a href="./index.html">Home</a>
+    <a href="./playlist.html">Playlists</a>
+    <a href="./setting.html">Settings</a>
+  </div>
+
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input id="search-input" type="text" placeholder="Tìm kiếm ...">
+    <button id="search-btn">Search</button>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <div class="nav-right">
+  <li id="login-link"><a href="login.html">Log in</a></li>
+    <li id="signup-link"><a href="register.html">Sign up</a></li>
+    <li id="profile-link" style="display: none;"><a href="profile.html">Profile</a></li>
+    <li id="logout-link" style="display: none;"><a href="#" id="logout-btn">Log out</a></li>
+  </div>
+</nav>
+</header>
+
+
+<section class="settings-content">
+  <h2>⚙️ Cài đặt chung</h2>
+  
+
+  <div class="setting-item">
+    <span>Chế độ tối</span>
+     <small class="setting-note">Bật giao diện màu tối để bảo vệ mắt.</small>
+    <label class="toggle-switch">
+      <input type="checkbox" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting-item">
+    <span>Thông báo</span>
+     <small class="setting-note">Nhận thông báo cập nhật mới nhất từ trang web.</small>
+    <label class="toggle-switch">
+      <input type="checkbox" checked />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting-item">
+    <span>Tự động phát</span>
+     <small class="setting-note">Tự động phát bài hát tiếp theo khi kết thúc bài hiện tại.</small>
+    <label class="toggle-switch">
+      <input type="checkbox" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  
+  <button type="button" onclick="alert('Lưu cài đặt thành công!')">Lưu cài đặt</button>
+</section>
+
+<div id="player-banner" class="player-banner">
+  <img id="player-thumbnail" src="" alt="thumbnail" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;">
+  <div id="now-playing-info"></div>
+    
+  <div class="custom-audio-player">
+    <audio id="audio-player" ></audio>
+ <button id="play-pause">
+ <img src="../asset/media-player-music-pause-svgrepo-com.svg" alt="Play/Pause" style="width: 24px; height: 24px;"> 
+</button>
+    <span id="current-time">00:00</span>
+    <input type="range" id="seek-bar" value="0" step="1">
+    <span id="duration">00:00</span>
+  </div>
+   <button id="favorite-btn" style="background: none; border: none; cursor: pointer;">
+      <img id="favorite-icon" src="../asset/favorite_24dp_75FBFD_FILL0_wght400_GRAD0_opsz24.svg" alt="Favorite" style="width: 24px; height: 24px;">
+    </button>
+</div>
+<script src="../js/audio.js"></script>
+  <script type="module" src="../js/config/check_session.js"></script>
+
+</body>
+</html>

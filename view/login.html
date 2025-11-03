@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <link rel="stylesheet" href="../css/login,register.css" />
+</head>
+<body>
+  <div class="background">
+      <div class="auth-card">
+      <div id="login-form" class="form-container">
+        <h2>Welcome Back</h2>
+        <p>Please login to your account</p>
+        <form id="login">
+          <div class="input-group">
+            <input id="email" type="text" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <input id="password" type="password" placeholder="Password" required />
+          </div>
+          <button type="submit">Login</button>
+       
+        </form>
+        <a class="toggle-link" href="register.html">Don't have an account? Register</a>
+        <a class="toggle-link" href="index.html">Use as an guest ?</a>
+      </div>
+
+
+   <script type="module" src="../js/config/auth.js"></script>
+  <script type="module" src="../js/config/check_session.js"></script>
+  <script type="module" src="../js/controller/login.js"></script>
+</body>
+</html>

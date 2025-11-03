@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlists - MusicZone</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/playlist.css" />
+    <link rel="stylesheet" href="../css/audio.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎶 Playlists</h1>
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html">Home</a>
+          <a href="./playlist.html">Playlists</a>
+          <a href="./setting.html">Settings</a>
+        </div>
+
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <input id="search-input" type="text" placeholder="Tìm kiếm ..." />
+          <button id="search-btn">Search</button>
+          <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div class="nav-right">
+          <li id="login-link"><a href="login.html">Log in</a></li>
+          <li id="signup-link"><a href="register.html">Sign up</a></li>
+          <li id="profile-link" style="display: none">
+            <a href="profile.html">Profile</a>
+          </li>
+          <li id="logout-link" style="display: none">
+            <a href="#" id="logout-btn">Log out</a>
+          </li>
+        </div>
+      </nav>
+    </header>
+    <section class="playlist-section">
+      <h2>Danh sách Playlist</h2>
+      <div class="playlist-list">
+        <div class="playlist-card">
+          <img
+            class="playlist-thumb"
+            src="https://placehold.co/160x160"
+            alt="Playlist 1"
+          />
+          <div class="playlist-title">Chill Vibes</div>
+          <div class="playlist-desc">Những bản nhạc nhẹ nhàng thư giãn.</div>
+          <div class="playlist-author">👤 MindX Music</div>
+        </div>
+        <div class="playlist-card">
+          <img
+            class="playlist-thumb"
+            src="https://placehold.co/160x160"
+            alt="Playlist 2"
+          />
+          <div class="playlist-title">Top Hits 2025</div>
+          <div class="playlist-desc">Tổng hợp các hit nổi bật năm 2025.</div>
+          <div class="playlist-author">👤 MindX Music</div>
+        </div>
+        <div class="playlist-card">
+          <img
+            class="playlist-thumb"
+            src="https://placehold.co/160x160"
+            alt="Playlist 3"
+          />
+          <div class="playlist-title">EDM Party</div>
+          <div class="playlist-desc">Bùng nổ cùng những bản EDM sôi động.</div>
+          <div class="playlist-author">👤 DJ Zone</div>
+        </div>
+        <div class="playlist-card">
+          <img
+            class="playlist-thumb"
+            src="https://placehold.co/160x160"
+            alt="Playlist 4"
+          />
+          <div class="playlist-title">Acoustic Love</div>
+          <div class="playlist-desc">
+            Giai điệu mộc mạc cho tâm hồn lãng mạn.
+          </div>
+          <div class="playlist-author">👤 MindX Music</div>
+        </div>
+      </div>
+    </section>
+    <div id="player-banner" class="player-banner">
+      <img
+        id="player-thumbnail"
+        src=""
+        alt="thumbnail"
+        style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px"
+      />
+      <div id="now-playing-info"></div>
+
+      <div class="custom-audio-player">
+        <audio id="audio-player"></audio>
+        <button id="play-pause">
+          <img
+            src="../asset/media-player-music-pause-svgrepo-com.svg"
+            alt="Play/Pause"
+            style="width: 24px; height: 24px"
+          />
+        </button>
+        <span id="current-time">00:00</span>
+        <input type="range" id="seek-bar" value="0" step="1" />
+        <span id="duration">00:00</span>
+      </div>
+      <button
+        id="favorite-btn"
+        style="background: none; border: none; cursor: pointer"
+      >
+        <img
+          id="favorite-icon"
+          src="../asset/favorite_24dp_75FBFD_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Favorite"
+          style="width: 24px; height: 24px"
+        />
+      </button>
+    </div>
+  </body>
+  <script type="module" src="../js/config/check_session.js"></script>
+  <script type="module" src="../js/controller/favourite-controller.js"></script>
+  <script type="module" src="../js/controller/audio.js"></script>
+</html>
